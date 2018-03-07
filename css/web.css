@@ -1,0 +1,919 @@
+*{  font-family: 'Roboto', sans-serif;
+    font-weight: black;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+p,h1,a {
+    color: #fff;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1430px){
+    h1 {
+        font-size: 18px;
+        
+    }
+    p {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 1900px){
+    
+}
+/* ----------------------------------- Main Layout ----------------------------------- */
+/*
+#load_wrapper {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 100000;
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+*/
+#parallalex_background {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2000px;
+    
+}
+
+
+#background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("http://pain4pleasure.de/web/assets/images/background/studio_mid.jpg");
+    background-size: cover;
+    z-index: -100;
+    
+}
+
+#background_image2 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-image: url("http://pain4pleasure.de/web/assets/images/background/studio2_mid.jpg");
+    background-size: cover;
+    z-index: -101;
+    
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: opacity 1s ease-in-out;
+    z-index: 998;
+    background: url("http://pain4pleasure.de/web/assets/images/background/menu_background.jpg");
+    background-size: cover;
+
+    
+}
+
+#menu nav{
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    top: 30%;
+    left: 35%;
+    color: #fff;
+	z-index: 999; 
+}
+
+#menu nav a{
+    display: block;
+    font-size: 30px;
+    margin-bottom: 15%;
+    transition: color 0.5s ease-in-out;
+    text-align: center;
+    letter-spacing: 20px;
+    
+}
+
+#menu nav a:hover{
+    text-decoration: line-through;
+}
+
+
+.menu_hidden {
+    display: none;
+}
+
+
+#burger_menu {
+    position: fixed;
+    top: 20px;
+    left: 95%;
+    opacity: 1;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.burger_nav {
+	width: 30px;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: transform 0.5s ease-in;
+    z-index: 1100;
+    
+}
+
+.burger_nav_expand_1 {
+    opacity: 1;
+    transform: rotate(-45deg) translate(-7px, 7px);
+    z-index: 1110;
+
+}
+.burger_nav_expand_2 {
+    opacity: 1111;
+    transform: rotate(45deg) translate(0, 0);
+    z-index: 1111;
+
+}
+
+
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    color: #ffffff;
+    font-family: "Avenir", "Helvetica";
+    font-size: larger;
+    z-index: 907;
+    padding: 20px 40px 40px 20px;
+    
+}
+
+#header > a {
+	margin-bottom: 50px;
+}
+
+#header_icons {
+	display: inline-block;
+    margin-left: 1%;
+    
+}
+
+#header_icons i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+#home {
+    position: relative;
+
+}
+
+#about1 {
+    position: relative;
+    background-color: #171717;
+
+}
+#about2 {
+    position: relative;
+    background-color: #2b2b30;
+
+}
+
+#gallery {
+    position: relative;
+    background-color: #171717;
+    overflow: hidden;
+
+
+}
+
+#contact {
+    position: relative;
+    background-color: #171717;
+
+}
+
+#footer {
+    position: relative;
+    background: url("http://pain4pleasure.de/web/assets/images/background/footer.jpg");
+    background-position: 200% 80%;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+.transition_div {
+    position: relative;
+    height: 400px;
+    width:100%;
+}
+
+.transition_div > h1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    color: #fff;
+    font-size: 100px;
+}
+
+/* header */
+
+#header > span:first-child {
+    margin-left: 3%;
+
+}
+
+
+#menu_btn > a:hover {
+    color: #a3a3a3;
+}
+
+#menu_btn > a:active{
+	text-decoration: line-through;
+}
+
+
+#header > span:last-child a{
+    margin-right: 20px;
+}
+#header > span:last-child a:hover{
+    cursor: pointer;
+}
+
+
+/* ----------------------------------- Section::home ----------------------------------- */
+
+#home {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: url("http://pain4pleasure.de/web/assets/images/background/needle.jpg");
+    background-position: 10% 70%;
+    background-size: cover;
+    transform: scale(1);
+    transition: filter 3s ease-out;
+    z-index: 1;
+}
+
+.homeblur{
+    -webkit-filter: brightness(50%) blur(10px);
+    filter: brightness(50%) blur(10px);
+    transition: filter 3s ease-out;
+}
+
+.home_logo {
+	position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    height: auto;
+}
+
+.home_logo img{
+	width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+
+
+/* ----------------------------------- Section::about ----------------------------------- */
+
+    #about1 h1, #about2 h1 {
+        letter-spacing: 7px;
+        margin-bottom: 20px;
+        margin: 10px 10px;
+	   font-size: 22px;
+    }
+    
+    #about1 p, #about2 p{
+	   margin: 10px 10px;
+        letter-spacing: 2px;
+	   font-size: 20px;
+        font-weight: 200;
+    }
+    
+    #about_image_1 {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        width: 40%;
+        height: 100%;
+        box-shadow: 0px 5px 10px 0px;
+        z-index: 100;
+    }
+    #about_image_2 {
+        position: absolute;
+        top: 20%;
+        left: 7%;
+        width: 35%;
+        height: 60%;
+        margin-top: 250px;
+        box-shadow: 0px 5px 10px 0px;
+    }
+
+    #about1_article {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 35%;
+        height: 40%;
+        padding: 20px 20px;
+    }
+
+    #about2_article {
+        position: absolute;
+        top: 15%;
+        left: 7%;
+        width: 35%;
+        height: 40%;
+    }        
+
+    #about3_article {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        width: 35%;
+        height: 40%;
+        padding: 20px 20px;
+    }    
+@media screen and (max-width: 1440px){
+    
+    #about1 h1, #about2 h1 {
+        letter-spacing: 7px;
+        margin-bottom: 20px;
+        margin: 10px 10px;
+	   font-size: 20px;
+    }
+    
+    #about1 p, #about2 p{
+	   margin: 10px 10px;
+        letter-spacing: 2px;
+	   font-size: 18px;
+    }
+}
+
+
+@media screen and (min-width: 1800px) {
+    
+    #about1 h1,about2 h1  {
+        letter-spacing: 7px;
+        margin-bottom: 20px;
+        margin: 10px 10px;
+	   font-size: 22px;
+    }
+    
+    #about1 p,#about2 p{
+        letter-spacing: 2px;
+	   margin: 10px 10px;
+	   font-size: 20px;
+    }
+    
+    #about_image_1 {
+        position: absolute;
+        left: 50%;
+        top: 5%;
+        width: 40%;
+        height: 80%;
+        margin-top: 250px;
+        box-shadow: 0px 5px 15px 5px black;
+        z-index: 100;
+    }
+    #about_image_2 {
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 40%;
+        height: 60%;
+        margin-top: 250px;
+        box-shadow: 0px 5px 15px 5px black;
+    }
+
+    #about1_article {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        width: 35%;
+        height: 40%;
+        padding: 20px 20px;
+    }
+
+    #about2_article {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 40%;
+        height: 40%;
+        padding: 20px 20px;
+    }        
+    
+    #about3_article {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40%;
+        height: 40%;
+        padding: 20px 20px;
+    }    
+    
+}
+
+
+/* ----------------------------------- Section::gallery ----------------------------------- */
+
+
+#image_view {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 85%;
+    background-color: #050505;
+}
+
+.gallery_image {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+#image_nav_container {
+    position: absolute;
+    left: 0;
+    top: 85%;
+    width: 100%;
+    height: 100%;
+    background-color: #050505;
+}
+
+#image_nav{
+    position: absolute;
+    top: 2%;
+    left: 35%;
+    min-width: 600px;
+    max-width: 40%;
+    height: 10%;
+}
+
+#gallery_btn_prev {
+	position: absolute;
+    top: 40%;
+    left: -10%;   
+}
+
+#gallery_btn_prev > a {
+    margin-bottom: 150px;
+	color: #050505;
+    cursor: pointer;
+    color: #fff ;
+}
+
+#gallery_btn_next {
+	position: absolute;
+    top: 40%;
+    left: 95%;
+}
+#gallery_btn_next > a {
+    margin-bottom: 150px;
+	color: #050505;
+    cursor: pointer;
+    color: #fff ;
+}
+
+#gallery_thumb_wrapper {
+    position: absolute;
+    min-width: 540px;
+    max-width: 35%;
+    min-height: 150px;
+    height: 100%;
+    background-color: #050505;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+#gallery_thumb_container {
+	position: absolute;
+    height: 100%;
+    width: 2700px;
+    padding: 2% 2%;    
+    transition: transform 1s ease-in-out;
+}
+
+.image_thumb {
+    flex-shrink: 2;
+	width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.image_thumb:last-child {
+    margin: 0;
+}
+
+.blackngrey {
+    filter: grayscale(100%);
+}
+
+
+
+.hidden{
+    opacity: 0.3;
+    visibility: hidden;
+    transition: opacity 2s ease-in-out;
+}
+
+@media screen and (min-width: 1450px){
+
+    h1{
+        margin-bottom: 10px;
+        color: #fff;
+    }
+}
+
+/* ----------------------------------- Section::contact ----------------------------------- */
+
+#contact_form_wrapper {
+    position: absolute;
+    top: -10%;
+    left: 10%;
+    width: 75%;
+    height: 120%;
+    background-color: #2b2b30;
+
+}
+
+#contact_top {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 90%;
+    height: 30%;
+    padding: 50px 50px;
+}
+
+#contact_top h1 {
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+}
+
+#contact_top p {
+    font-size: 20px;
+}
+
+#contact_left {
+	position: absolute;
+    top: 30%;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    padding: 50px 50px;
+}
+
+#contact_left input {
+    margin-left: 10%;
+}
+
+
+#contact_left:nth-child(1) span {
+    margin-right: 10%;
+}
+
+
+#contact_right {
+	position: absolute;
+    top: 33%;
+    left: 50%;
+    width: 40%;
+    height: 50%;
+    padding: 50px 50px;
+}
+
+
+#contact p{
+    margin-bottom: 5%;
+    text-align: top;
+}
+
+#contact input{
+    height: 20px;
+    width: 60%;
+    font-size: 14px;
+    border: 1px solid #c1c1c1;
+    background-color: transparent;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 5px 5px;
+    margin-left: 10px;
+    outline-color: antiquewhite;
+    color: #050505;
+
+}
+
+.vorname span, .nachname span, .email span, .stelle span, .tattoo_info span {
+    float: left;
+    min-width: 100px;
+}
+
+
+
+
+#contact textarea{
+    
+    height: 220px;
+    width: 60%;
+    font-size: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+    color: #050505;
+    resize: none;
+    padding: 5px 5px;
+}
+
+
+.files {
+    display: inline-block;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+    margin-top: 40%;
+}
+
+.contact_info {
+	font-size: 14px;
+}
+
+#files {
+	filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.file_div {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px 10px 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    background-image: url(/Web/assets/icons/img_upload_icn@2x.png);
+    background-image: contain;
+    background-position: 50% 50%;
+}
+
+#image_upload_preview{
+    display: block;
+    width: 40%;
+    height: 200px;
+    margin-bottom: 40%;
+    overflow: hidden;
+}
+.preview {
+
+}
+
+.upload_preview_image {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 10px 10px;
+}
+
+#contact_form_send_btn {
+    width: auto;
+    height: 50px;
+    padding: 10px 10px;
+    color: #fff;
+    margin-top: 10%;
+    margin-left: 2%;
+    background-color: #2b2b30;
+    border-radius: 5%;
+    border: 2px solid #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+
+#contact_form_send_btn:hover {
+	transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+}
+
+@media screen and (min-width: 1450px){
+    
+    #contact_top {
+        top: 10%;
+    }
+   #contact_right {
+        top: 38%;
+    }   #contact_left {
+        top: 38%;
+    }   .upload_preview_image {
+        width: 80px;
+        height: 80px;
+        margin: 10px 10px;
+    }
+    .file_div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+    
+
+}@media screen and (min-width: 1650px){
+    
+    #contact_top {
+        top: 10%;
+    }
+   #contact_right {
+        top: 38%;
+    }   #contact_left {
+        top: 38%;
+    }   .upload_preview_image {
+        width: 80px;
+        height: 80px;
+        margin: 10px 10px;
+    }
+    .file_div {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+    
+
+}
+
+
+
+
+/* ----------------------------------- Section::footer ----------------------------------- */
+
+#foot_footer{
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    height: 5%;
+    background-color: #2b2b30;
+    backdrop-filter: blur(12px);
+    transition: all 2s ease-out;
+}
+    
+#footer_left {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+#footer_map {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 60%;
+    background-image: url(/Web/assets/images/content/map2.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    padding-bottom: 30%;
+    filter: grayscale(100);
+}
+
+#footer_gmap {
+	filter: grayscale(100);
+}
+
+#footer_right {
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 50%;
+    height: 60%;
+    padding: 10% 10% 10% 10%;
+	background-color: #171717;
+}
+
+#footer_right h2{
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+
+
+#footer_right p{
+    margin-bottom: 50px;
+}
+
+
+#footer_navigation {
+	position: absolute;
+    top: 97%;
+    left: 42%;
+    transition: top 2s ease;
+}
+
+
+
+.footer_link_active {
+    text-decoration: underline;
+}
+
+.footer_navigation_top {
+    top: 12% !important;
+}
+
+#footer_navigation span{
+	margin: 10px;
+}
+
+#footer_content {
+    position: relative;
+    top: 20%;
+    left: 20%;
+    max-width: 60%;
+    height: 80%;
+    overflow: scroll;
+    z-index: 100;
+    transition: opacity 4s ease-in-out;
+    
+}
+
+.footer_content_text {
+	margin-bottom: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.hidden {
+    top: 200%;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.footer_expand {
+    transform: scaleY(50);
+    transition: scale 1s ease;
+}
+
+#footer_navigation span{
+    color: #fff;
+}
+
+
+/* small screen */
+
+@media screen and (max-width: 800px){
+    #home{
+        background-position: 50% 50%;
+    }
+    #header > span:last-child {
+        margin-left: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1450px){
+
+    #footer_navigation {
+        position: absolute;
+        top: 97%;
+        left: 43%;
+        transition: top 2s ease;
+    }
+    
+    #footer_right h2{
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+
+
+    #footer_right p{
+        margin-bottom: 50px;
+    }
+}
+    
